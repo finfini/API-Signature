@@ -54,7 +54,7 @@ class Signature {
       self::$json_body = (json_encode(self::$params['body']));
     }
 
-    $body = strtolower(bin2hex(hash('sha256', self::$json_body)));
+    $body = strtolower(hash('sha256', self::$json_body));
     return $body;
   }
 
